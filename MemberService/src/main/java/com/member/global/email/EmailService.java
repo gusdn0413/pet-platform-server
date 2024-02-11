@@ -1,4 +1,4 @@
-package com.member.domain.email.service;
+package com.member.global.email;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

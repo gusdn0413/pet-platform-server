@@ -1,4 +1,4 @@
-package com.member.domain.email.dto;
+package com.member.domain.member.dto.email;
 
 import lombok.Getter;
 import lombok.Setter;

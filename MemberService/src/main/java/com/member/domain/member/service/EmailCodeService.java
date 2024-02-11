@@ -1,10 +1,9 @@
 package com.member.domain.member.service;
 
-import com.member.domain.email.entity.JoinEmailCode;
-import com.member.domain.email.repository.JoinEmailCodeRepository;
-import com.member.domain.email.service.EmailService;
-import com.member.domain.email.service.random.RandomCodeGenerator;
-import com.member.domain.member.repository.MemberRepository;
+import com.member.domain.member.entity.email.JoinEmailCode;
+import com.member.domain.member.repository.email.JoinEmailCodeRepository;
+import com.member.global.email.EmailService;
+import com.member.global.email.random.RandomCodeGenerator;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

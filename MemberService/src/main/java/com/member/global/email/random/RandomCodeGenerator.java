@@ -1,4 +1,4 @@
-package com.member.domain.email.service.random;
+package com.member.global.email.random;
 
 import java.security.SecureRandom;
 

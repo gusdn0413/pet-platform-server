@@ -1,4 +1,4 @@
-package com.member.domain.email.entity;
+package com.member.domain.member.entity.email;
 
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -14,7 +14,7 @@ public class JoinEmailCode {
     private String code;
 
     @Builder
-    public JoinEmailCode(String name, String code, String email) {
+    public JoinEmailCode(String code, String email) {
         this.code = code;
         this.email = email;
     }

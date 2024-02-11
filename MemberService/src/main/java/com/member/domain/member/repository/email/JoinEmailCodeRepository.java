@@ -1,7 +1,7 @@
-package com.member.domain.email.repository;
+package com.member.domain.member.repository.email;
 
 
-import com.member.domain.email.entity.JoinEmailCode;
+import com.member.domain.member.entity.email.JoinEmailCode;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
