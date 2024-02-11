@@ -32,11 +32,7 @@ public class MemberService {
     }
 
     @Transactional
-    public boolean updateMemberInfo(Long memberId, String currentPassword, MemberUpdateRequestDTO updateRequestDTO) {
-        if (!verifyPassword(memberId, currentPassword)) {
-            log.error("비밀번호가 일치하지 않습니다");
-            return false;
-        }
+    public boolean updateMemberInfo(Long memberId, MemberUpdateRequestDTO updateRequestDTO) {
 
         Optional<Member> findMember = memberRepository.findById(memberId);
         if (findMember.isPresent()) {
