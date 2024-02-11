@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -13,6 +15,8 @@ import java.util.List;
 @Table(name = "MEMBER")
 @Entity
 @Getter
+@SQLDelete(sql = "UPDATE member SET isDeleted = true WHERE id = ?")
+@Where(clause = "isDeleted = false")
 public class Member extends BaseTimeEntity {
     @Id
     @Column(name = "MEMBER_ID")
@@ -84,6 +88,10 @@ public class Member extends BaseTimeEntity {
 
     public void updateNickName(String nickName) {
         this.nickName = nickName;
+    }
+
+    public void softDelete() {
+        this.withdrawn = true;
     }
 }
 

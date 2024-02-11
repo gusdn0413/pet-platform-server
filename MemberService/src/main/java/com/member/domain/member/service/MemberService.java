@@ -68,7 +68,8 @@ public class MemberService {
         if (optionalMember.isPresent()) {
             Member member = optionalMember.get();
             if (bCryptPasswordEncoder.matches(currentPassword, member.getPassword())) {
-                memberRepository.delete(member);
+                member.softDelete();
+                memberRepository.save(member);
                 log.info("회원 ID {}의 회원 탈퇴가 완료되었습니다.", memberId);
                 return true;
             } else {
